@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+
+/* Internal page CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+    background-color: #eeeeee;
+}
+
+header {
+    padding-bottom: 2em;
+}
+
+.header-wrap {
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.header-wrap h1 {
+    margin: 0;
+}
+
+.disclaimer {
+    margin: 0 auto;
+    width: 50%;
+    border: 1px solid #000000;
+    background-color: #dddddd;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+.disclaimer-header {
+    font-weight: 600;
+}
+
+.disclaimer ul {
+    margin: 0;
+    padding-top: 0.5rem;
+}
+
+.page table tr:first-child th {
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.page td, .page th {
+    padding: 1rem;
+
+}
+
+.page table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.socials, .source {
+    padding-top: 1rem;
+}
+
+/*
+Colors
+
+IMPORTANT:
+- Light mode (default)
+*/
+
+.disclaimer {
+    border: 1px solid #000000;
+    background-color: #dddddd;
+}
+
+.page table tr {
+    /* No clue why Chrome wants to render `1px` as double its size */
+    border-bottom: 0.5px dotted #444444;
+}
+
+.page table tr:first-child {
+    border-bottom: 1.5px solid #000000;
+}
+
+.page table * td {
+    border-left: 0.5px dotted #000000;
+}
+
+.even {
+    background-color: #dddddd;
+}
+
+.red {
+    color: #c73500;
+}
+
+.even .red {
+    color: #b43000;
+}
+
+.yellow {
+    color: #816800;
+}
+
+.even .yellow {
+    color: #755e00;
+}
+
+.green {
+    color: #007b51;
+}
+
+.even .green {
+    color: #006f4a;
+}
+
+footer a {
+    color: #0000ff;
+}
+
+footer a:visited {
+    color: #00758c;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color: #eeeeee;
+        background-color: #000000;
+    }
+
+    .disclaimer {
+        border: 1px solid #eeeeee;
+        background-color: #222222;
+    }
+
+    .page table tr {
+        border-bottom-color: #555555;
+    }
+
+    .page table tr:first-child {
+        border-bottom-color: #eeeeee;
+    }
+
+    .page table * td {
+        border-left-color: #aaaaaa;
+    }
+
+    .even {
+        background-color: #222222;
+    }
+
+    .red, .even .red {
+        color: #ff8c8c;
+    }
+
+    .yellow, .even .yellow {
+        color: #d2a800;
+    }
+
+    .green , .even .green {
+        color: #00c684;
+    }
+
+    footer a {
+        color: #00a4c4;
+    }
+
+    footer a:visited {
+        color: #8989ff;
+    }
+}
+
+</style>
+<title>Rynali stream goals tracker</title>
+</head>
+
+<body>
+<div class="page">
+    <header>
+        <div class="header-wrap">
+            <h1>📺⚡ Rynali stream goal tracker ⚡📺</h1>
+        </div>
+        <div class="disclaimer">
+            <div class="disclaimer-header">⚠️ Disclaimers ⚠️</div>
+            <ul>
+                <li>All dates are relative to Rynali's local time, US Eastern time.</li>
+                <li>Some data I wasn't able to confirm fully. This is reflected in the table accordingly.</li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="table">
+        <table>
+            <tr>
+                <th scope="col">Reward</th>
+                <th scope="col">Condition</th>
+                <th scope="col">Date set</th>
+                <th scope="col">Achieved</th>
+                <th scope="col">Status</th>
+            </tr>
+            
+            <tr class="even">
+                <th scope="row">Girl week 2</th>
+                <td>$2000 in tips by end of stream</td>
+                <td>2022-03-27</td>
+                <td><span class="green">✔︎</span></td>
+                <td><span class="yellow">started 2022-03-27</span></td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row">Skirt at skatepark</th>
+                <td>$2000 in tips</td>
+                <td>2022-03-23</td>
+                <td>2022-03-23</td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">Girl week 1</th>
+                <td>$1000 in tips</td>
+                <td>2022-03-23</td>
+                <td>2022-03-23</td>
+                <td><span class="yellow">started 2022-03-27</span></td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row"></th>
+                <td>777 subs</td>
+                <td>2022-03-23</td>
+                <td>2022-03-27</td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">Go to store dressed as girl</th>
+                <td>$5000 in tips by end of stream</td>
+                <td>2022-03-02</td>
+                <td><span class="green">✔︎</span></td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row">12-hour stream</th>
+                <td>$15000 in tips by end of stream</td>
+                <td>2022-03-02</td>
+                <td><span class="red">❌︎</span></td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">Shave body on stream</th>
+                <td>$1000 in tips by end of stream</td>
+                <td>2022-03-02</td>
+                <td><span class="green">✔︎</span></td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row">Cooking stream 2</th>
+                <td>$2000 in tips by end of stream</td>
+                <td>2022-03-02</td>
+                <td><span class="green">✔︎</span></td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">Play Outlast</th>
+                <td>$3000 in tips by end of stream</td>
+                <td>2022-03-02</td>
+                <td><span class="green">✔︎</span></td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row">Play horror game (Five Nights at Freddy's)</th>
+                <td>$500 in tips</td>
+                <td>2021-12-19</td>
+                <td>2021-12-19</td>
+                <td><span class="yellow">started 2022-02-18</span></td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">Arcane cosplay</th>
+                <td>$1300 in tips</td>
+                <td>2021-12-14</td>
+                <td>2021-12-17</td>
+                <td>unknown</td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row">Get nails done</th>
+                <td>500 subs</td>
+                <td>2021-10-11 to 2021-12-01</td>
+                <td>2021-12-01 to 2022-01-27</td>
+                <td>2022-03-05 to 2022-03-08</td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">Cooking stream 1</th>
+                <td><span class="yellow">unknown</span> in tips</td>
+                <td>2021-10-11 to 2021-12-01</td>
+                <td>2021-12-01 to 2022-01-27</td>
+                <td>2022-02-20</td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row">Latex Dress</th>
+                <td><span class="yellow">unknown</span></td>
+                <td>2021-10-11 to 2021-12-01</td>
+                <td>2021-12-01 to 2022-01-27</td>
+                <td>2022-01-23</td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">Jessica Rabbit cosplay</th>
+                <td>$690 in tips</td>
+                <td>2021-10-11 to 2021-12-01</td>
+                <td>2021-12-08</td>
+                <td>2022-03-20</td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row">Acrylic nails</th>
+                <td>1000 subs</td>
+                <td>2021-10-11 to 2021-12-01</td>
+                <td>2022-01-19</td>
+                <td>2021-11-21</td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">10-hour stream</th>
+                <td><span class="yellow">unknown</span></td>
+                <td>2021-10-02 to 2021-11-16</td>
+                <td>2021-10-02 to 2021-11-19</td>
+                <td>2021-11-21</td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row">Lego</th>
+                <td><span class="yellow">unknown</span></td>
+                <td>2021-10-11 to 2021-10-23</td>
+                <td>2021-10-23 to 2021-12-01</td>
+                <td>2021-10-23 to 2021-12-14</td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">Fake bobs</th>
+                <td>666 subs</td>
+                <td>2021-10-02 to 2021-10-11</td>
+                <td>2021-10-11</td>
+                <td>2021-10-17</td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row">Astolfo cosplay</th>
+                <td>$420 in tips</td>
+                <td>2021-10-02 to 2021-10-11</td>
+                <td>2021-10-17 to 2021-12-01</td>
+                <td>2021-10-23</td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">TTS for donations</th>
+                <td>300 subs</td>
+                <td>2021-08-18 to 2021-08-20</td>
+                <td>2021-09-05</td>
+                <td>2021-09-10</td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row">Makeup stream</th>
+                <td>1200 follows</td>
+                <td>2021-08-15 to 2021-08-20</td>
+                <td>2021-08-22</td>
+                <td>2022-10-23</td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">Zero Two cosplay</th>
+                <td>200 subs</td>
+                <td>2021-08-15</td>
+                <td>2021-08-18 to 2021-08-20</td>
+                <td>2021-08-20</td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row"></th>
+                <td>150 subs</td>
+                <td>2021-08-06 to 2021-08-13</td>
+                <td>2021-08-13</td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row">Sleepover stream</th>
+                <td>$2420 in tips</td>
+                <td>2021-08-06</td>
+                <td>2022-01-21</td>
+                <td>2021-09-10</td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row"></th>
+                <td>69 subs</td>
+                <td>2021-07-28</td>
+                <td>2021-08-06</td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row"></th>
+                <td>50 subs</td>
+                <td>2021-07-28</td>
+                <td>2021-07-28</td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row"></th>
+                <td>10 subs</td>
+                <td>2021-07-28</td>
+                <td>2021-07-28</td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row"></th>
+                <td>1000 follows</td>
+                <td>2021-07-28</td>
+                <td>2021-08-15</td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="odd">
+                <th scope="row"></th>
+                <td>600 follows</td>
+                <td>2021-07-21</td>
+                <td>2021-07-22 to 2021-07-28</td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+            <tr class="even">
+                <th scope="row"></th>
+                <td>500 follows</td>
+                <td>2021-07-20</td>
+                <td>2021-07-20</td>
+                <td><span class="red">not started</span></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <footer>
+        <p>A public service by Claudia. ❤️</p>
+        <div class="socials">
+            Discord: <a href="https://discordapp.com/users/667135548535603230">codergoth#7868</a> |
+            GitHub: <a href="https://github.com/dead-claudia">@dead-claudia</a> |
+            Twitter: <a href="https://twitter.com/dead_claudia">@dead_claudia</a>
+        </div>
+        <div class="source">
+            This site is open source on GitHub, so
+            <a href="https://github.com/dead-claudia/rynali-goals">feel free to contribute</a>!
+            You can also find the underlying data set
+            <a href="https://github.com/dead-claudia/rynali-goals/blob/main/rynali-goals.csv">here</a>.
+        </div>
+    </footer>
+</div>
+</body>
+</html>
