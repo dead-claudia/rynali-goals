@@ -50,7 +50,6 @@ header {
 
 .page td, .page th {
     padding: 1rem;
-
 }
 
 .page table {
@@ -76,7 +75,8 @@ footer {
 Colors
 
 IMPORTANT:
-- Light mode (default)
+- Light mode (default) aims for WCAG 2.1 AA compliance
+- Dark mode aims for WCAG 2.1 AAA compliance
 */
 
 .disclaimer {
