@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+    background-color: #eeeeee;
+}
+
+header {
+    padding-bottom: 2em;
+}
+
+.header-wrap {
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.header-wrap h1 {
+    margin: 0;
+}
+
+.disclaimer {
+    margin: 0 auto;
+    width: 50%;
+    border: 1px solid #000000;
+    background-color: #dddddd;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+.disclaimer-header {
+    font-weight: 600;
+}
+
+.disclaimer ul {
+    margin: 0;
+    padding-top: 0.5rem;
+}
+
+.page table tr:first-child th {
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.page td, .page th {
+    padding: 1rem;
+
+}
+
+.page table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.socials, .source {
+    padding-top: 1rem;
+}
+
+/*
+Colors
+
+IMPORTANT:
+- Light mode (default)
+*/
+
+.disclaimer {
+    border: 1px solid #000000;
+    background-color: #dddddd;
+}
+
+.page table tr {
+    /* No clue why Chrome wants to render `1px` as double its size */
+    border-bottom: 0.5px dotted #444444;
+}
+
+.page table tr:first-child {
+    border-bottom: 1.5px solid #000000;
+}
+
+.page table * td {
+    border-left: 0.5px dotted #000000;
+}
+
+.even {
+    background-color: #dddddd;
+}
+
+.red {
+    color: #c73500;
+}
+
+.even .red {
+    color: #b43000;
+}
+
+.yellow {
+    color: #816800;
+}
+
+.even .yellow {
+    color: #755e00;
+}
+
+.green {
+    color: #007b51;
+}
+
+.even .green {
+    color: #006f4a;
+}
+
+footer a {
+    color: #0000ff;
+}
+
+footer a:visited {
+    color: #00758c;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color: #eeeeee;
+        background-color: #000000;
+    }
+
+    .disclaimer {
+        border: 1px solid #eeeeee;
+        background-color: #222222;
+    }
+
+    .page table tr {
+        border-bottom-color: #555555;
+    }
+
+    .page table tr:first-child {
+        border-bottom-color: #eeeeee;
+    }
+
+    .page table * td {
+        border-left-color: #aaaaaa;
+    }
+
+    .even {
+        background-color: #222222;
+    }
+
+    .red, .even .red {
+        color: #ff8c8c;
+    }
+
+    .yellow, .even .yellow {
+        color: #d2a800;
+    }
+
+    .green , .even .green {
+        color: #00c684;
+    }
+
+    footer a {
+        color: #00a4c4;
+    }
+
+    footer a:visited {
+        color: #8989ff;
+    }
+}
