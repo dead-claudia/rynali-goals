@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A simple tracker for Rynali's stream goals.">
 <style>
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -367,12 +368,13 @@ html {
 
 header {
     padding-bottom: 2em;
+    margin: 0 auto;
 }
 
 .header-wrap {
     margin: 0 auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
     text-align: center;
 }
 
@@ -382,9 +384,10 @@ header {
 
 .disclaimer {
     margin: 0 auto;
-    width: 50%;
-    border-radius: 0.25rem;
-    padding: 1rem;
+    width: 80%;
+    max-width: 30em;
+    border-radius: 0.25em;
+    padding: 1em;
 }
 
 .disclaimer-header {
@@ -393,17 +396,22 @@ header {
 
 .disclaimer ul {
     margin: 0;
-    padding-top: 0.5rem;
+    padding-top: 0.5em;
 }
 
 .page table tr:first-child th {
-    padding-bottom: 0.5rem;
-    font-size: 1.2rem;
+    padding-bottom: 0.41em;
+    padding-top: 0.83em;
+    font-size: 1.2em;
 }
 
 .page td, .page th {
-    padding: 1rem;
+    padding: 1em;
     text-align: center;
+}
+
+.table {
+    overflow-x: scroll;
 }
 
 .page table {
@@ -417,12 +425,38 @@ footer p {
 
 footer {
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1em;
+    padding-bottom: 2em;
 }
 
 .socials, .source {
-    padding-top: 1rem;
+    padding-top: 1em;
+}
+
+.tv-cap {
+    display: none;
+}
+
+.scroll-notice {
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    .tv-wing {
+        display: none;
+    }
+
+    .tv-cap {
+        display: block;
+        font-size: 2em;
+    }
+
+    .scroll-notice {
+        display: block;
+        font-style: italic;
+        text-align: center;
+        padding-bottom: 1em;
+    }
 }
 
 /*
@@ -541,23 +575,37 @@ footer a:visited {
 }
 
 </style>
-<title>Rynali stream goals tracker</title>
+<title>Rynali Stream Goals Tracker</title>
 </head>
 
 <body>
 <div class="page">
     <header>
         <div class="header-wrap">
-            <h1>📺⚡ Rynali stream goal tracker ⚡📺</h1>
+            <div class="tv-cap" aria-hidden="true">⚡📺⚡</div>
+            <h1>
+                <span class="tv-wing" aria-hidden="true">⚡📺⚡</span>
+                Rynali Stream Goals Tracker
+                <span class="tv-wing" aria-hidden="true">⚡📺⚡</span>
+            </h1>
+            <div class="tv-cap" aria-hidden="true">⚡📺⚡</div>
         </div>
         <div class="disclaimer">
-            <div class="disclaimer-header">⚠️ Disclaimers ⚠️</div>
+            <div class="disclaimer-header">
+                <span aria-hidden="true">⚠️</span>
+                Disclaimers
+                <span aria-hidden="true">⚠️</span>
+            </div>
             <ul>
                 <li>All dates are relative to Rynali's local time, US Eastern time.</li>
                 <li>Some data I wasn't able to confirm fully. This is reflected in the table accordingly.</li>
             </ul>
         </div>
     </header>
+
+    <div class="scroll-notice" aria-hidden="true">
+        Note: the table can be scrolled to the right to reveal hidden columns.
+    </div>
 
     <div class="table">
         <table>
@@ -571,249 +619,249 @@ footer a:visited {
             
             <tr class="even">
                 <th scope="row">Girl week 2</th>
-                <td>$2000 in tips by end of stream</td>
-                <td>2022-03-27</td>
+                <td>$2000 in tips<br>by end of stream</td>
+                <td>2022‑03‑27</td>
                 <td><span class="green">✔︎</span></td>
-                <td><span class="yellow">started 2022-03-27</span></td>
+                <td><span class="yellow">started 2022‑03‑27</span></td>
             </tr>
 
             <tr class="odd">
                 <th scope="row">Skirt at skatepark</th>
                 <td>$2000 in tips</td>
-                <td>2022-03-23</td>
-                <td>2022-03-23</td>
+                <td>2022‑03‑23</td>
+                <td>2022‑03‑23</td>
                 <td><span class="red">not started</span></td>
             </tr>
 
             <tr class="even">
                 <th scope="row">Girl week 1</th>
                 <td>$1000 in tips</td>
-                <td>2022-03-23</td>
-                <td>2022-03-23</td>
-                <td><span class="yellow">started 2022-03-27</span></td>
+                <td>2022‑03‑23</td>
+                <td>2022‑03‑23</td>
+                <td><span class="yellow">started 2022‑03‑27</span></td>
             </tr>
 
             <tr class="odd">
                 <th scope="row"></th>
                 <td>777 subs</td>
-                <td>2022-03-23</td>
-                <td>2022-03-27</td>
+                <td>2022‑03‑23</td>
+                <td>2022‑03‑27</td>
                 <td></td>
             </tr>
 
             <tr class="even">
                 <th scope="row">Go to store dressed as girl</th>
-                <td>$5000 in tips by end of stream</td>
-                <td>2022-03-02</td>
+                <td>$5000 in tips<br>by end of stream</td>
+                <td>2022‑03‑02</td>
                 <td><span class="green">✔︎</span></td>
                 <td><span class="red">not started</span></td>
             </tr>
 
             <tr class="odd">
                 <th scope="row">12-hour stream</th>
-                <td>$15000 in tips by end of stream</td>
-                <td>2022-03-02</td>
+                <td>$15000 in tips<br>by end of stream</td>
+                <td>2022‑03‑02</td>
                 <td><span class="red">❌︎</span></td>
                 <td><span class="red">not started</span></td>
             </tr>
 
             <tr class="even">
                 <th scope="row">Shave body on stream</th>
-                <td>$1000 in tips by end of stream</td>
-                <td>2022-03-02</td>
+                <td>$1000 in tips<br>by end of stream</td>
+                <td>2022‑03‑02</td>
                 <td><span class="green">✔︎</span></td>
                 <td><span class="red">not started</span></td>
             </tr>
 
             <tr class="odd">
                 <th scope="row">Cooking stream 2</th>
-                <td>$2000 in tips by end of stream</td>
-                <td>2022-03-02</td>
+                <td>$2000 in tips<br>by end of stream</td>
+                <td>2022‑03‑02</td>
                 <td><span class="green">✔︎</span></td>
                 <td><span class="red">not started</span></td>
             </tr>
 
             <tr class="even">
                 <th scope="row">Play Outlast</th>
-                <td>$3000 in tips by end of stream</td>
-                <td>2022-03-02</td>
+                <td>$3000 in tips<br>by end of stream</td>
+                <td>2022‑03‑02</td>
                 <td><span class="green">✔︎</span></td>
                 <td><span class="red">not started</span></td>
             </tr>
 
             <tr class="odd">
-                <th scope="row">Play horror game (Five Nights at Freddy's)</th>
+                <th scope="row">Play horror game<br>(Five Nights at Freddy's)</th>
                 <td>$500 in tips</td>
-                <td>2021-12-19</td>
-                <td>2021-12-19</td>
-                <td><span class="yellow">started 2022-02-18</span></td>
+                <td>2021‑12‑19</td>
+                <td>2021‑12‑19</td>
+                <td><span class="yellow">started 2022‑02‑18</span></td>
             </tr>
 
             <tr class="even">
                 <th scope="row">Arcane cosplay</th>
                 <td>$1300 in tips</td>
-                <td>2021-12-14</td>
-                <td>2021-12-17</td>
+                <td>2021‑12‑14</td>
+                <td>2021‑12‑17</td>
                 <td><span class="yellow">unknown</span></td>
             </tr>
 
             <tr class="odd">
                 <th scope="row">Get nails done</th>
                 <td>500 subs</td>
-                <td>2021-10-11 to 2021-12-01</td>
-                <td>2021-12-01 to 2022-01-27</td>
-                <td>2022-03-05 to 2022-03-08</td>
+                <td>2021‑10‑11 to 2021‑12‑01</td>
+                <td>2021‑12‑01 to 2022‑01‑27</td>
+                <td>2022‑03‑05 to 2022‑03‑08</td>
             </tr>
 
             <tr class="even">
                 <th scope="row">Cooking stream 1</th>
                 <td><span class="yellow">unknown</span> in tips</td>
-                <td>2021-10-11 to 2021-12-01</td>
-                <td>2021-12-01 to 2022-01-27</td>
-                <td>2022-02-20</td>
+                <td>2021‑10‑11 to 2021‑12‑01</td>
+                <td>2021‑12‑01 to 2022‑01‑27</td>
+                <td>2022‑02‑20</td>
             </tr>
 
             <tr class="odd">
                 <th scope="row">Latex Dress</th>
                 <td><span class="yellow">unknown</span></td>
-                <td>2021-10-11 to 2021-12-01</td>
-                <td>2021-12-01 to 2022-01-27</td>
-                <td>2022-01-23</td>
+                <td>2021‑10‑11 to 2021‑12‑01</td>
+                <td>2021‑12‑01 to 2022‑01‑27</td>
+                <td>2022‑01‑23</td>
             </tr>
 
             <tr class="even">
                 <th scope="row">Jessica Rabbit cosplay</th>
                 <td>$690 in tips</td>
-                <td>2021-10-11 to 2021-12-01</td>
-                <td>2021-12-08</td>
-                <td>2022-03-20</td>
+                <td>2021‑10‑11 to 2021‑12‑01</td>
+                <td>2021‑12‑08</td>
+                <td>2022‑03‑20</td>
             </tr>
 
             <tr class="odd">
                 <th scope="row">Acrylic nails</th>
                 <td>1000 subs</td>
-                <td>2021-10-11 to 2021-12-01</td>
-                <td>2022-01-19</td>
-                <td>2021-11-21</td>
+                <td>2021‑10‑11 to 2021‑12‑01</td>
+                <td>2022‑01‑19</td>
+                <td>2021‑11‑21</td>
             </tr>
 
             <tr class="even">
                 <th scope="row">10-hour stream</th>
                 <td><span class="yellow">unknown</span></td>
-                <td>2021-10-02 to 2021-11-16</td>
-                <td>2021-10-02 to 2021-11-19</td>
-                <td>2021-11-21</td>
+                <td>2021‑10‑02 to 2021‑11‑16</td>
+                <td>2021‑10‑02 to 2021‑11‑19</td>
+                <td>2021‑11‑21</td>
             </tr>
 
             <tr class="odd">
                 <th scope="row">Lego</th>
                 <td><span class="yellow">unknown</span></td>
-                <td>2021-10-11 to 2021-10-23</td>
-                <td>2021-10-23 to 2021-12-01</td>
-                <td>2021-10-23 to 2021-12-14</td>
+                <td>2021‑10‑11 to 2021‑10‑23</td>
+                <td>2021‑10‑23 to 2021‑12‑01</td>
+                <td>2021‑10‑23 to 2021‑12‑14</td>
             </tr>
 
             <tr class="even">
                 <th scope="row">Fake bobs</th>
                 <td>666 subs</td>
-                <td>2021-10-02 to 2021-10-11</td>
-                <td>2021-10-11</td>
-                <td>2021-10-17</td>
+                <td>2021‑10‑02 to 2021‑10‑11</td>
+                <td>2021‑10‑11</td>
+                <td>2021‑10‑17</td>
             </tr>
 
             <tr class="odd">
                 <th scope="row">Astolfo cosplay</th>
                 <td>$420 in tips</td>
-                <td>2021-10-02 to 2021-10-11</td>
-                <td>2021-10-17 to 2021-12-01</td>
-                <td>2021-10-23</td>
+                <td>2021‑10‑02 to 2021‑10‑11</td>
+                <td>2021‑10‑17 to 2021‑12‑01</td>
+                <td>2021‑10‑23</td>
             </tr>
 
             <tr class="even">
                 <th scope="row">TTS for donations</th>
                 <td>300 subs</td>
-                <td>2021-08-18 to 2021-08-20</td>
-                <td>2021-09-05</td>
-                <td>2021-09-10</td>
+                <td>2021‑08‑18 to 2021‑08‑20</td>
+                <td>2021‑09‑05</td>
+                <td>2021‑09‑10</td>
             </tr>
 
             <tr class="odd">
                 <th scope="row">Makeup stream</th>
                 <td>1200 follows</td>
-                <td>2021-08-15 to 2021-08-20</td>
-                <td>2021-08-22</td>
-                <td>2022-10-23</td>
+                <td>2021‑08‑15 to 2021‑08‑20</td>
+                <td>2021‑08‑22</td>
+                <td>2022‑10‑23</td>
             </tr>
 
             <tr class="even">
                 <th scope="row">Zero Two cosplay</th>
                 <td>200 subs</td>
-                <td>2021-08-15</td>
-                <td>2021-08-18 to 2021-08-20</td>
-                <td>2021-08-20</td>
+                <td>2021‑08‑15</td>
+                <td>2021‑08‑18 to 2021‑08‑20</td>
+                <td>2021‑08‑20</td>
             </tr>
 
             <tr class="odd">
                 <th scope="row"></th>
                 <td>150 subs</td>
-                <td>2021-08-06 to 2021-08-13</td>
-                <td>2021-08-13</td>
+                <td>2021‑08‑06 to 2021‑08‑13</td>
+                <td>2021‑08‑13</td>
                 <td></td>
             </tr>
 
             <tr class="even">
                 <th scope="row">Sleepover stream</th>
                 <td>$2420 in tips</td>
-                <td>2021-08-06</td>
-                <td>2022-01-21</td>
-                <td>2021-09-10</td>
+                <td>2021‑08‑06</td>
+                <td>2022‑01‑21</td>
+                <td>2021‑09‑10</td>
             </tr>
 
             <tr class="odd">
                 <th scope="row"></th>
                 <td>69 subs</td>
-                <td>2021-07-28</td>
-                <td>2021-08-06</td>
+                <td>2021‑07‑28</td>
+                <td>2021‑08‑06</td>
                 <td></td>
             </tr>
 
             <tr class="even">
                 <th scope="row"></th>
                 <td>50 subs</td>
-                <td>2021-07-28</td>
-                <td>2021-07-28</td>
+                <td>2021‑07‑28</td>
+                <td>2021‑07‑28</td>
                 <td></td>
             </tr>
 
             <tr class="odd">
                 <th scope="row"></th>
                 <td>10 subs</td>
-                <td>2021-07-28</td>
-                <td>2021-07-28</td>
+                <td>2021‑07‑28</td>
+                <td>2021‑07‑28</td>
                 <td></td>
             </tr>
 
             <tr class="even">
                 <th scope="row"></th>
                 <td>1000 follows</td>
-                <td>2021-07-28</td>
-                <td>2021-08-15</td>
+                <td>2021‑07‑28</td>
+                <td>2021‑08‑15</td>
                 <td></td>
             </tr>
 
             <tr class="odd">
                 <th scope="row"></th>
                 <td>600 follows</td>
-                <td>2021-07-21</td>
-                <td>2021-07-22 to 2021-07-28</td>
+                <td>2021‑07‑21</td>
+                <td>2021‑07‑22 to 2021‑07‑28</td>
                 <td></td>
             </tr>
 
             <tr class="even">
                 <th scope="row"></th>
                 <td>500 follows</td>
-                <td>2021-07-20</td>
-                <td>2021-07-20</td>
+                <td>2021‑07‑20</td>
+                <td>2021‑07‑20</td>
                 <td></td>
             </tr>
 
@@ -828,10 +876,9 @@ footer a:visited {
             Twitter: <a href="https://twitter.com/dead_claudia">@dead_claudia</a>
         </div>
         <div class="source">
-            This site is open source on GitHub, so
-            <a href="https://github.com/dead-claudia/rynali-goals">feel free to contribute</a>!
-            You can also find the underlying data set
-            <a href="https://github.com/dead-claudia/rynali-goals/blob/main/rynali-goals.csv">here</a>.
+            This site is open source on GitHub, complete with
+            <a href="https://github.com/dead-claudia/rynali-goals/blob/main/rynali-goals.csv">the underlying dataset</a>,
+            so <a href="https://github.com/dead-claudia/rynali-goals">feel free to contribute</a>!
         </div>
     </footer>
 </div>
