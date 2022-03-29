@@ -5,7 +5,7 @@
     "license": "ISC",
     "type": "commonjs",
     "scripts": {
-        "release": "node lib/build",
+        "build": "node lib/build",
         "watch": "npx chokidar-cli \"lib/**\" \"rynali-goals.csv\" -c \"node lib/build\" --initial",
         "server": "npx http-server -c -1"
     },
