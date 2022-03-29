@@ -10,12 +10,13 @@ html {
 
 header {
     padding-bottom: 2em;
+    margin: 0 auto;
 }
 
 .header-wrap {
     margin: 0 auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
     text-align: center;
 }
 
@@ -25,9 +26,10 @@ header {
 
 .disclaimer {
     margin: 0 auto;
-    width: 50%;
-    border-radius: 0.25rem;
-    padding: 1rem;
+    width: 80%;
+    max-width: 30em;
+    border-radius: 0.25em;
+    padding: 1em;
 }
 
 .disclaimer-header {
@@ -36,17 +38,22 @@ header {
 
 .disclaimer ul {
     margin: 0;
-    padding-top: 0.5rem;
+    padding-top: 0.5em;
 }
 
 .page table tr:first-child th {
-    padding-bottom: 0.5rem;
-    font-size: 1.2rem;
+    padding-bottom: 0.41em;
+    padding-top: 0.83em;
+    font-size: 1.2em;
 }
 
 .page td, .page th {
-    padding: 1rem;
+    padding: 1em;
     text-align: center;
+}
+
+.table {
+    overflow-x: scroll;
 }
 
 .page table {
@@ -60,12 +67,38 @@ footer p {
 
 footer {
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1em;
+    padding-bottom: 2em;
 }
 
 .socials, .source {
-    padding-top: 1rem;
+    padding-top: 1em;
+}
+
+.tv-cap {
+    display: none;
+}
+
+.scroll-notice {
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    .tv-wing {
+        display: none;
+    }
+
+    .tv-cap {
+        display: block;
+        font-size: 2em;
+    }
+
+    .scroll-notice {
+        display: block;
+        font-style: italic;
+        text-align: center;
+        padding-bottom: 1em;
+    }
 }
 
 /*
