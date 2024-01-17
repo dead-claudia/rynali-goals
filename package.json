@@ -2,7 +2,7 @@
     "private": true,
     "name": "rynali-goals",
     "version": "0.0.0",
-    "license": "ISC",
+    "license": "Apache-2.0 AND CC-BY-4.0",
     "type": "commonjs",
     "scripts": {
         "build": "node lib/build",
